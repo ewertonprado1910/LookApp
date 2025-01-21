@@ -1,0 +1,129 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Ewerton",
+            "email": "ewerton@teste.com",
+            "password": "123"
+        },
+        {
+            "id": 2,
+            "name": "Vivian",
+            "email": "vivian@teste.com",
+            "password": "1234"
+        }
+    ],
+    "feed": {
+        "stories": [
+            {
+                "id": 1,
+                "cover": "https://picsum.photos/500",
+                "owner": {
+                    "username": "teste123",
+                    "photo": "https://picsum.photos/50"
+                },
+                "createdAt": "2025-01-06T10:01"
+            }
+        ],
+        "posts": [
+            {
+                "id": 1,
+                "cover": "https://picsum.photos/500",
+                "description": "Interview: Shoe Designer John Fluevog On New Book, Spirituality And",
+                "isLiked": false,
+                "likeInfos": {
+                    "photos": [
+                        "https://picsum.photos/50",
+                        "https://picsum.photos/50",
+                        "https://picsum.photos/50"
+                    ],
+                    "description": "Like by 10,98"
+                },
+                "owner": {
+                    "username": "teste123",
+                    "photo": "https://picsum.photos/50"
+                },
+                "createdAt": "2025-01-06T10:01"
+            }
+        ]
+    },
+    "categories": [
+        {
+            "id": 1,
+            "cover": "https://picsum.photos/500",
+            "title": "Womans",
+            "items": 1235
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "title": "Large striped cardigan",
+            "price": 1025,
+            "brand": "Raf Simons",
+            "cover": "https://picsum.photos/500",
+            "categoryId": 1,
+            "type": "Shirts",
+            "description": "Enjoy the beauty of",
+            "sizes": [
+                {
+                    "label": "P",
+                    "value": "P"
+                },
+                {
+                    "label": "M",
+                    "value": "M"
+                },
+                {
+                    "label": "G",
+                    "value": "G"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "title": "Large striped cardigan",
+            "price": 2508,
+            "brand": "Raf Simons",
+            "cover": "https://picsum.photos/500",
+            "categoryId": 1,
+            "type": "Shirts",
+            "description": "Enjoy the beauty of",
+            "sizes": [
+                {
+                    "label": "P",
+                    "value": "P"
+                },
+                {
+                    "label": "M",
+                    "value": "M"
+                },
+                {
+                    "label": "G",
+                    "value": "G"
+                }
+            ]
+        }
+    ],
+    "orders": [
+        {
+            "id": 1,
+            "userId": 1,
+            "step": "waiting",
+            "createdAt": "2025-01-06T10:01",
+            "orderNumber": "15",
+            "trackingNumber": "IW3475453455",
+            "totalValue": 85.58,
+            "totalItems": 3
+        },
+        {
+            "userId": 2,
+            "step": "waiting",
+            "createdAt": "2025-01-06T10:01",
+            "orderNumber": "16",
+            "trackingNumber": "IW3475453455",
+            "totalValue": 85.58,
+            "totalItems": 3
+        }
+    ]
+}

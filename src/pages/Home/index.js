@@ -1,0 +1,43 @@
+import React, { useContext } from 'react';
+import { StatusBar } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import { colors } from '../../styles/theme.json';
+import { Text, Box, Title, Button, Spacer } from '../../components/index';
+import { AppContext } from '../../contexts/app';
+
+const Home = ({ navigation }) => {
+    const context = useContext(AppContext);
+
+    return (
+        <>
+            <StatusBar backgroundColor="#130F40" />
+            <Box hasPadding align="center" background="dark">
+                <Box justify="center" align="center">
+                    <Icon name="star" size={50} color={`${colors.light}`} />
+                    <Spacer />
+                    <Spacer />
+                    <Title align="center" color="light" variant="big" bold>
+                        LOOKAPPP
+                    </Title>
+                    <Text color="light" align="center">Stay on top of the fashion world and buy your favorite looks.</Text>
+                </Box>
+
+                <Box align="center" justify="flex-end" fluid>
+                    <Button block >
+                        <Text color="light"
+                            onPress={() => navigation.navigate('Signin')}
+                        >SigIn my account</Text>
+                    </Button>
+                    <Spacer size="25px" />
+                    <Text color="light"
+                        underline
+                        onPress={() => navigation.navigate('SignUp')}
+                    >Create new account</Text>
+                </Box>
+            </Box>
+        </>
+    );
+};
+
+export default Home;
