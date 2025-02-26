@@ -1,13 +1,33 @@
-import React, { useContext } from 'react';
-import { StatusBar } from 'react-native';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useContext, useEffect, useState } from 'react';
+import { StatusBar, ActivityIndicator } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { colors } from '../../styles/theme.json';
 import { Text, Box, Title, Button, Spacer } from '../../components/index';
 import { AppContext } from '../../contexts/app';
 
 const Home = ({ navigation }) => {
-    const context = useContext(AppContext);
+    const [loading, setLoading] = useState(true);
+    const { setUser } = useContext(AppContext);
+
+    const checkLogged = async () => {
+        AsyncStorage.clear();
+        setLoading(true);
+
+        const loggedUser = await AsyncStorage.getItem('@user');
+        if (loggedUser) {
+            setUser(JSON.parse(loggedUser));
+            navigation.replace('Feed');
+        } else {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        checkLogged();
+    }, []);
 
     return (
         <>
@@ -21,9 +41,16 @@ const Home = ({ navigation }) => {
                         LOOKAPPP
                     </Title>
                     <Text color="light" align="center">Stay on top of the fashion world and buy your favorite looks.</Text>
+                    <Spacer />
+                    {loading && <>
+                        <Spacer size="40px" />
+                        <ActivityIndicator size="large" />
+                    </>}
                 </Box>
 
-                <Box align="center" justify="flex-end" fluid>
+
+
+                {!loading && (<Box align="center" justify="flex-end" fluid>
                     <Button block >
                         <Text color="light"
                             onPress={() => navigation.navigate('Signin')}
@@ -32,9 +59,11 @@ const Home = ({ navigation }) => {
                     <Spacer size="25px" />
                     <Text color="light"
                         underline
-                        onPress={() => navigation.navigate('SignUp')}
-                    >Create new account</Text>
+                        onPress={() => navigation.navigate('SignUp')}>
+                        Create new account
+                    </Text>
                 </Box>
+                )}
             </Box>
         </>
     );

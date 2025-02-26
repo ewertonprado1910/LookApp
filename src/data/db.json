@@ -1,129 +1,210 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "Ewerton",
-            "email": "ewerton@teste.com",
-            "password": "123"
-        },
-        {
-            "id": 2,
-            "name": "Vivian",
-            "email": "vivian@teste.com",
-            "password": "1234"
-        }
-    ],
-    "feed": {
-        "stories": [
-            {
-                "id": 1,
-                "cover": "https://picsum.photos/500",
-                "owner": {
-                    "username": "teste123",
-                    "photo": "https://picsum.photos/50"
-                },
-                "createdAt": "2025-01-06T10:01"
-            }
-        ],
-        "posts": [
-            {
-                "id": 1,
-                "cover": "https://picsum.photos/500",
-                "description": "Interview: Shoe Designer John Fluevog On New Book, Spirituality And",
-                "isLiked": false,
-                "likeInfos": {
-                    "photos": [
-                        "https://picsum.photos/50",
-                        "https://picsum.photos/50",
-                        "https://picsum.photos/50"
-                    ],
-                    "description": "Like by 10,98"
-                },
-                "owner": {
-                    "username": "teste123",
-                    "photo": "https://picsum.photos/50"
-                },
-                "createdAt": "2025-01-06T10:01"
-            }
-        ]
+  "users": [
+    {
+      "id": "1",
+      "name": "Ewerton",
+      "email": "ewerton@teste.com",
+      "password": "123"
     },
-    "categories": [
-        {
-            "id": 1,
-            "cover": "https://picsum.photos/500",
-            "title": "Womans",
-            "items": 1235
-        }
-    ],
-    "products": [
-        {
-            "id": 1,
-            "title": "Large striped cardigan",
-            "price": 1025,
-            "brand": "Raf Simons",
-            "cover": "https://picsum.photos/500",
-            "categoryId": 1,
-            "type": "Shirts",
-            "description": "Enjoy the beauty of",
-            "sizes": [
-                {
-                    "label": "P",
-                    "value": "P"
-                },
-                {
-                    "label": "M",
-                    "value": "M"
-                },
-                {
-                    "label": "G",
-                    "value": "G"
-                }
-            ]
+    {
+      "id": "2",
+      "name": "Vivian",
+      "email": "vivian@teste.com",
+      "password": "1234"
+    },
+    {
+      "id": "c7d9",
+      "name": "Nala",
+      "email": "nala@teste.com",
+      "password": "123"
+    },
+    {
+      "id": "6ce5",
+      "name": "Sansa",
+      "email": "sansa@teste.com",
+      "password": "123"
+    }
+  ],
+  "feed": {
+    "stories": [
+      {
+        "id": 1,
+        "cover": "https://picsum.photos/id/237/200/300",
+        "owner": {
+          "username": "teste123",
+          "photo": "https://picsum.photos/id/237/200/300"
         },
-        {
-            "id": 1,
-            "title": "Large striped cardigan",
-            "price": 2508,
-            "brand": "Raf Simons",
-            "cover": "https://picsum.photos/500",
-            "categoryId": 1,
-            "type": "Shirts",
-            "description": "Enjoy the beauty of",
-            "sizes": [
-                {
-                    "label": "P",
-                    "value": "P"
-                },
-                {
-                    "label": "M",
-                    "value": "M"
-                },
-                {
-                    "label": "G",
-                    "value": "G"
-                }
-            ]
-        }
-    ],
-    "orders": [
-        {
-            "id": 1,
-            "userId": 1,
-            "step": "waiting",
-            "createdAt": "2025-01-06T10:01",
-            "orderNumber": "15",
-            "trackingNumber": "IW3475453455",
-            "totalValue": 85.58,
-            "totalItems": 3
+        "createdAt": "2025-01-06T10:01"
+      },
+      {
+        "id": 1,
+        "cover": "https://picsum.photos/200/300",
+        "owner": {
+          "username": "teste123",
+          "photo": "https://picsum.photos/200"
         },
-        {
-            "userId": 2,
-            "step": "waiting",
-            "createdAt": "2025-01-06T10:01",
-            "orderNumber": "16",
-            "trackingNumber": "IW3475453455",
-            "totalValue": 85.58,
-            "totalItems": 3
-        }
+        "createdAt": "2025-01-06T10:01"
+      }
+    ],
+    "posts": [
+      {
+        "id": 1,
+        "cover": "https://picsum.photos/200/300",
+        "description": "Interview: Shoe Designer John Fluevog On New Book, Spirituality And",
+        "isLiked": true,
+        "likeInfos": {
+          "photos": [
+            "https://picsum.photos/200/300?grayscale",
+            "https://picsum.photos/seed/picsum/200/300",
+            "https://picsum.photos/200/300"
+          ],
+          "description": "Like by 10,98"
+        },
+        "owner": {
+          "username": "teste123",
+          "photo": "https://picsum.photos/200"
+        },
+        "createdAt": "2025-01-06T10:01"
+      },
+      {
+        "id": 2,
+        "cover": "https://picsum.photos/500",
+        "description": "Interview: Shoe Designer John Fluevog On New Book, Spirituality And",
+        "isLiked": true,
+        "likeInfos": {
+          "photos": [
+            "https://picsum.photos/50",
+            "https://picsum.photos/50",
+            "https://picsum.photos/50"
+          ],
+          "description": "Like by 10,98"
+        },
+        "owner": {
+          "username": "teste123",
+          "photo": "https://picsum.photos/50"
+        },
+        "createdAt": "2025-01-06T10:01"
+      }
     ]
+  },
+  "categories": [
+    {
+      "id": "1",
+      "cover": "https://picsum.photos/200/300",
+      "title": "Womans",
+      "items": 1235
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "title": "Large striped cardigan",
+      "price": 1025,
+      "brand": "Raf Simons",
+      "cover": "https://picsum.photos/500",
+      "categoryId": 1,
+      "type": "Shirts",
+      "description": "Enjoy the beauty of",
+      "sizes": [
+        {
+          "label": "P",
+          "value": "P"
+        },
+        {
+          "label": "M",
+          "value": "M"
+        },
+        {
+          "label": "G",
+          "value": "G"
+        },
+        {
+          "label": "GG",
+          "value": "GG"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Gucci Balaclava",
+      "price": 2500,
+      "brand": "Raf Simons",
+      "cover": "https://picsum.photos/500",
+      "categoryId": 1,
+      "type": "Balaclava",
+      "description": "Enjoy the beauty of",
+      "sizes": [
+        {
+          "label": "P",
+          "value": "P"
+        },
+        {
+          "label": "M",
+          "value": "M"
+        },
+        {
+          "label": "G",
+          "value": "G"
+        },
+        {
+          "label": "GG",
+          "value": "GG"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Large striped cardigan",
+      "price": 2508,
+      "brand": "Raf Simons",
+      "cover": "https://picsum.photos/500",
+      "categoryId": 2,
+      "type": "Shirts",
+      "description": "Enjoy the beauty of",
+      "sizes": [
+        {
+          "label": "P",
+          "value": "P"
+        },
+        {
+          "label": "M",
+          "value": "M"
+        },
+        {
+          "label": "G",
+          "value": "G"
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "f10e",
+      "userId": "1",
+      "step": "waiting",
+      "createdAt": "2025-02-03T19:56:41-03:00",
+      "orderNumber": 1738623307978,
+      "trackingNumber": 1738623401486,
+      "totalValue": 932.5,
+      "totalItems": 1
+    },
+    {
+      "userId": "1",
+      "step": "delivered",
+      "createdAt": "2025-02-03T19:56:41-03:00",
+      "orderNumber": 1738623307978,
+      "trackingNumber": 1738623401486,
+      "totalValue": 932.5,
+      "totalItems": 1
+    },
+    {
+      "userId": "1",
+      "step": "canceled",
+      "createdAt": "2025-02-03T19:56:41-03:00",
+      "orderNumber": 1738623307978,
+      "trackingNumber": 1738623401486,
+      "totalValue": 932.5,
+      "totalItems": 1
+    }
+  ]
 }

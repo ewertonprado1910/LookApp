@@ -4,12 +4,12 @@ import Post from '.';
 
 import { Box, Text } from '../../components/index';
 
-const PostList = () => {
+const PostList = ({posts}) => {
     return (
         <Box>
-            {Array.from(Array(20))?.map(item =>
+            {posts.map(post =>
                 <Text>
-                    <Post/>
+                    <Post post={post}/>
                 </Text>
             )}
         </Box>

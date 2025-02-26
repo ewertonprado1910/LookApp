@@ -1,29 +1,30 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
+import moment from 'moment';
 
 import { colors } from '../../styles/theme.json';
 import { Box, Text, Touchable, Cover } from '../../components/index';
 
-const Post = () => {
+const Post = ({ post }) => {
     return (
         <Box fluid hasPadding>
             <Box row align="center">
                 <Cover
-                    image="https://conteudo.imguol.com.br/c/entretenimento/ac/2024/01/10/apostas-para-a-moda-2024-tweed-1704914443770_v2_450x600.jpg.webp"
+                    image={post?.owner?.photo}
                     width="40px"
                     height="40px"
                     circle="100%" />
 
                 <Box spacing="0px 0px 0px 10px">
-                    <Text bold color="dark">_Vivian</Text>
-                    <Text variant="small">3 mins a go</Text>
+                    <Text bold color="dark">{post?.owner?.username}</Text>
+                    <Text variant="small"> {moment(post?.createdAt).fromNow()}</Text>
                 </Box>
                 <Touchable width="50px" height="30px" align="flex-end">
                     <Icon name="options" size={15} color={`${colors.muted}`} />
                 </Touchable>
             </Box>
             <Cover
-                image="https://i.ytimg.com/vi/fHn1-cK4ylc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCVh_fM2Q_0cHv5k1mgPbhVW6dO-A"
+                image={post.cover}
                 width="100%"
                 height="190px"
                 radius="10px"
@@ -31,10 +32,10 @@ const Post = () => {
             />
             <Box row fluid align="center">
                 <Box row fluid align="center">
-                    {Array.from(Array(3))?.map(item =>
+                    {post?.likeInfos?.photos.map(photo =>
                         <Cover
                             circle
-                            image="https://i.ytimg.com/vi/fHn1-cK4ylc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCVh_fM2Q_0cHv5k1mgPbhVW6dO-A"
+                            image={photo}
                             width="30px"
                             height="30px"
                             border={`1px solid ${colors.light}`}
@@ -43,13 +44,14 @@ const Post = () => {
                     <Text
                         spacing="0px 20px"
                         variant="small">
-                        Liked by 10,098
+                        {post?.likeInfos?.description}
                     </Text>
                 </Box>
                 <Box row justify="flex-end">
 
                     <Touchable width="24px" spacing="0px 10px 0px 0px">
-                        <Icon name="heart" size={24} color={colors.danger} />
+                        <Icon name="heart" size={24}
+                            color={colors[post?.isLiked ? 'danger' : 'muted']} />
                     </Touchable>
 
                     <Touchable width="24px" spacing="0px 10px 0px 0px">
@@ -64,7 +66,7 @@ const Post = () => {
             </Box>
             <Text
                 color="dark" variant="small">
-                Interview: Shoe Designer John Fluevog On New Book, Spirituality And ‘Slow Fashion’
+                {post?.description}
             </Text>
         </Box>
 

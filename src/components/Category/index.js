@@ -6,11 +6,11 @@ import { Touchable, Cover, Title, Text, Spacer, Box } from '../index';
 import util from '../../util';
 import { colors } from '../../styles/theme.json';
 
-const Category = () => {
+const Category = ({category}) => {
     const { navigate } = useNavigation();
     return (
         <Touchable
-        onPress={() => navigate('Category')}
+        onPress={() => navigate('Category', {category})}
             width="100%"
             height="180px"
             radius="10px"
@@ -18,15 +18,15 @@ const Category = () => {
             <Cover
                 width="100%"
                 height="100%"
-                image="https://i.customizando.net/wp-content/uploads/2023/01/tendencia-moda-feminina-2023.jpg" >
+                image={category?.cover} >
                 <Box
                     width="100%"
                     justify="center"
                     align="center"
                     background={util.toAlpha(colors.black, 60)}>
-                    <Title color="light" >Womam </Title>
+                    <Title color="light" >{category.title} </Title>
                     <Spacer />
-                    <Text>3512 ITEMS</Text>
+                    <Text>{category?.items} ITEMS</Text>
                 </Box>
             </Cover>
         </Touchable>

@@ -3,16 +3,12 @@ import { ScrollView } from '../../components/index';
 import Product from '.';
 
 
-const ProductyList = () => {
+const ProductyList = ({ products }) => {
     return (
         <ScrollView fluid>
-            {Array.from(Array(30))?.map(item =>
+            {products.map(product =>
                 <Product
-                    cover="https://down-br.img.susercontent.com/file/71c88876c0b8617e8bbfd82559cecb60"
-                    brand="Ref Simons"
-                    title="Large striped cardigan "
-                    price="$1080"
-                />
+                    product={product} />
             )}
         </ScrollView>
     );

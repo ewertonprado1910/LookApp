@@ -1,13 +1,17 @@
 /* eslint-disable no-alert */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { StatusBar } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { colors } from '../../styles/theme.json';
 import api from '../../services/api';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { Box, Text, Title, Spacer, Button, Input } from '../../components/index';
 
-const Signin = ({ navigation }) => {
+import { AppContext } from '../../contexts/app';
+
+const Signin = ({ navigation: { navigate, replace } }) => {
+    const { setUser: setUserContext } = useContext(AppContext);
     const [user, setUser] = useState({
         email: '',
         password: '',
@@ -15,30 +19,33 @@ const Signin = ({ navigation }) => {
 
     const requestLogin = async () => {
         try {
-
             if (user.email?.length === 0 || user.password?.length === 0) {
-                alert('Fill all field');
+                alert('Fill all fields');
                 return false;
             }
-            const { data: users } = await api.get('/users', {
+
+            const response = await api.get('/users', {
                 params: {
-                    email: user.email,
+                    email: user.email.toLowerCase(),
                     password: user.password,
                 },
-
             });
 
-            const [loggedUser] = users;
+            const [loggedUser] = response.data;
             if (!loggedUser) {
                 alert('User not found');
                 return false;
             }
 
-            console.log(loggedUser);
+            await AsyncStorage.setItem('@user', JSON.stringify(loggedUser));
+
+            setUserContext(loggedUser);
+
+            replace('Feed');
 
         } catch (err) {
-            console.log(err.message);
-            alert(err.message);
+            console.error('Erro na requisição:', err.message, err);
+            alert('Erro ao conectar com o servidor: ' + err.message);
         }
     };
 
@@ -83,7 +90,7 @@ const Signin = ({ navigation }) => {
                 <Text
                     color="gray50"
                     underline
-                    onPress={() => navigation.navigate('SignUp')}
+                    onPress={() => navigate('SignUp')}
                 >Create new account</Text>
             </Box>
         </>

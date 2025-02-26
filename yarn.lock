@@ -2914,12 +2914,12 @@ caniuse-lite@^1.0.30001669:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001684.tgz#0eca437bab7d5f03452ff0ef9de8299be6b08e16"
   integrity sha512-G1LRwLIQjBQoyq0ZJGqGIJUXzJ8irpbjHLpVRXDvBEScFJ9b17sgK6vlx0GAJFE21okD7zXl08rRRUfq6HdoEQ==
 
-card-validator@^10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/card-validator/-/card-validator-10.0.1.tgz#143d9644fa81f6c6a4391eb4afd1d426a0b7b608"
-  integrity sha512-W1Wb87meBxDMb9TaFMYxUBVLOzURsSFpUSm2ROgPepJm0HFQHP67TUORkcF/62p8CX3XIr3KENyeu3C0fkQe5w==
+card-validator@^10.0.2:
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/card-validator/-/card-validator-10.0.2.tgz#22deab8172bcb8cb6c878f5824636707e313e191"
+  integrity sha512-Mq8puzE9LqVoKK83Vpcl7x4CF2brHk/1ufYQWvVVpedGc/wXt844oWzwAkBbnbRdYQKwfBkfoWtR7vRvnIbf2g==
   dependencies:
-    credit-card-type "^10.0.1"
+    credit-card-type "^10.0.2"
 
 chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
   version "4.1.2"
@@ -3228,7 +3228,7 @@ create-jest@^29.7.0:
     jest-util "^29.7.0"
     prompts "^2.0.1"
 
-credit-card-type@^10.0.1:
+credit-card-type@^10.0.2:
   version "10.0.2"
   resolved "https://registry.yarnpkg.com/credit-card-type/-/credit-card-type-10.0.2.tgz#a9be299ecd0ea44f4b51c8212109670bb0f4e669"
   integrity sha512-vt/iQokU0mtrT7ceRU75FSmWnIh5JFpLsUUUWYRmztYekOGm0ZbCuzwFTbNkq41k92y+0B8ChscFhRN9DhVZEA==

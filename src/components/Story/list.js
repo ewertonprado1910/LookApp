@@ -1,10 +1,11 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 
-import { Box, Title, Text, ScrollView } from '../../components/index';
+import { Box, Text, ScrollView } from '../../components/index';
 import Story from '.';
 
 
-const StoryList = () => {
+const StoryList = ({stories}) => {
     return (
         <Box fluid height="270px">
             <Box
@@ -25,8 +26,8 @@ const StoryList = () => {
                 style={{
                     paddingLeft: 20,
                 }}>
-                {Array.from(Array(20))?.map(item =>
-                    <Story />
+                {stories?.map(story =>
+                    <Story story={story} />
                 )}
             </ScrollView>
         </Box>

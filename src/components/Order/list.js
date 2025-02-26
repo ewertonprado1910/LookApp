@@ -3,13 +3,11 @@ import { ScrollView } from '../../components/index';
 import Order from '.';
 
 
-const OrderyList = () => {
+const OrderyList = ({orders}) => {
     return (
         <ScrollView fluid background="light" hasPadding>
-            {Array.from(Array(3))?.map(item =>
-                <Order
-
-                />
+            {orders?.map(order =>
+                <Order order={order}/>
             )}
         </ScrollView>
     );
