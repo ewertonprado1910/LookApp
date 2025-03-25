@@ -13,7 +13,7 @@
 <h3>Fotos do projeto.</h3>
 <img src="https://media.licdn.com/dms/image/v2/D4D2DAQG2WCsp5DAb7A/profile-treasury-image-shrink_1280_1280/B4DZVE7GORG4AQ-/0/1740618098052?e=1743472800&v=beta&t=j2lSdQrCSNrl0eotNjGGbhdbBLw8re8KsGxDfZbvCds" />
 <br>
-<img src="https://media.licdn.com/dms/image/v2/D4D2DAQFdDTXUz_p3LA/profile-treasury-image-shrink_1280_1280/B4DZVE7wV5HwAQ-/0/1740618271068?e=1741723200&v=beta&t=kYSb6uoV7aLraSvh9z_5eT50oS__m0RolZrZ4r-snrs" />
+<img src="https://media.licdn.com/dms/image/v2/D4D2DAQFdDTXUz_p3LA/profile-treasury-image-shrink_1280_1280/B4DZVE7wV5HwAQ-/0/1740618271068?e=1743472800&v=beta&t=1g3PozCQfTN2wgIrOuM7AyaJNQ5bbvih2D_JzJP1mNM" />
 
 
 
